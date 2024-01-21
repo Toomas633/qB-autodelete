@@ -50,9 +50,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/toomas633/qB-autodelete:${{ env.DATE }}
             ghcr.io/toomas633/qB-autodelete:latest
             docker.io/toomas633/qb-autodelete:latest
-            docker.io/toomas633/qb-autodelete:${{ env.DATE }}
           labels: |
             org.opencontainers.image.created=${{ env.DATE }}

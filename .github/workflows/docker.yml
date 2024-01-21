@@ -23,6 +23,7 @@ jobs:
         
   Dev-Image:
     runs-on: ubuntu-latest
+    needs: Set-Date
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

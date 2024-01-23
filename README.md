@@ -39,8 +39,8 @@ The script uses the following environment variables:
 
 ### Cron Job Setup
 
-To run the script at regular intervals, add a cron job to your system. For example check torrents with 30min intervals.
-`echo "*/30 * * * * /usr/src/app/autodelete.py >> /var/log/cron.log 2>&1" > /etc/cron.d/qb-autodelete`
+To run the script automatically create a CRON job to start the script after reboot:
+`echo "@reboot /paht/to/autodelete.py >> /path/to/autodelete.log 2>&1" > /etc/cron.d/qb-autodelete`
 
 ## Docker
 

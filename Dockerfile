@@ -4,10 +4,7 @@ WORKDIR /usr/src/app
 
 COPY autodelete.py .
     
-RUN pip install \
-    qbittorrent-api \
-    logging \
-    schedule
+RUN pip install qbittorrent-api schedule
 
 ENV QBITTORRENT_URL="http://localhost:8080/"
 ENV QBITTORRENT_USERNAME="your_default_username"

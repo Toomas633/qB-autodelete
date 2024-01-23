@@ -26,7 +26,7 @@ Before running the script, ensure you have the following:
 - Python 3.10 or higher installed
 - Docker installed (optional, for containerized deployment)
 - qBittorrent installed and accessible
-- Python qBittorrent api, logging and schedule packages `pip install qbittorrent-api logging schedule`
+- Python qBittorrent api and schedule packages `pip install qbittorrent-api schedule`
 
 ### Environment Variables
 

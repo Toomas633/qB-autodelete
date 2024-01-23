@@ -1,5 +1,9 @@
 from qbittorrentapi import Client
 import os
+import logging
+import sys
+
+logging.basicConfig(stream=sys.stdout, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 qbittorrent_url = os.getenv("QBITTORRENT_URL", "http://localhost/")
 qbittorrent_port = os.getenv("QBITTORRENT_PORT", "8081")
@@ -13,10 +17,8 @@ def check_and_remove_finished():
 
     for torrent in torrents:
         if torrent['amount_left'] == 0:
-            print(f"Torrent '{torrent['name']}' has finished downloading. Removing torrent (keeping files)...")
+            logging.info(f"Torrent '{torrent['name']}' has finished downloading. Removing torrent (keeping files)")
             qb.torrents_delete(False, [torrent['hash']])
-            print(f"Torrent '{torrent['name']}' removed.")
-            print("\n")
             
     qb.auth_log_out()
     
@@ -24,5 +26,5 @@ if __name__ == "__main__":
     try:
         check_and_remove_finished()
     except Exception as e:
-        print(f"ERROR: {e}")
+        logging.error(e)
 

@@ -5,11 +5,11 @@
 # qB-autodelete
 
 - [Local](#local)
-    - [Prerequisites](#prerequisites)
-    - [Environment Variables](#environment-variables)
-    - [Cron Job Setup](#cron-job-setup)
+  - [Prerequisites](#prerequisites)
+  - [Environment Variables](#environment-variables)
+  - [Cron Job Setup](#cron-job-setup)
 - [Docker](#docker)
-    - [Docker Compose](#docker-compose)
+  - [Docker Compose](#docker-compose)
 
 This script is designed to automatically remove completed torrents from qBittorrent to keep your system organized.
 
@@ -26,7 +26,7 @@ Before running the script, ensure you have the following:
 - Python 3.10 or higher installed
 - Docker installed (optional, for containerized deployment)
 - qBittorrent installed and accessible
-- Python qBittorrent api package `pip install qbittorrent-api`
+- Python qBittorrent api and logging packages `pip install qbittorrent-api logging`
 
 ### Environment Variables
 
